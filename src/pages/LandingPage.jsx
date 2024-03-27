@@ -23,7 +23,7 @@ function LandingPage() {
         setLoading(true);
 
         try {
-            const response = await axios.get(`http://localhost:5000/api/v2/user/users/${user}`);
+            const response = await axios.get(`https://notifier-backend.vercel.app/api/v2/user/users/${user}`);
             console.log("collected info:", response.data);
             toast.success('User Data fetched');
             console.log('User data collected')
@@ -48,7 +48,7 @@ function LandingPage() {
 
         try {
             const subscription = 'Active';
-            const response = await axios.put(`http://localhost:5000/api/v2/user/subscription/${user}`,{subscription:subscription});
+            const response = await axios.put(`https://notifier-backend.vercel.app/api/v2/user/subscription/${user}`,{subscription:subscription});
             console.log("collected info:", response.data);
             toast.success('Subscription Active');
             console.log('Subscription updated')
@@ -67,7 +67,7 @@ function LandingPage() {
 
         try {
             const subscription = 'InActive';
-            const response = await axios.put(`http://localhost:5000/api/v2/user/subscription/${user}`,{subscription});
+            const response = await axios.put(`https://notifier-backend.vercel.app/api/v2/user/subscription/${user}`,{subscription});
             console.log("collected info:", response.data);
             toast.success('Subscription DeaActived');
             console.log('Subscription updated')
