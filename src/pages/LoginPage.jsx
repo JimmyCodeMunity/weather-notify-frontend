@@ -38,7 +38,7 @@ function LoginPage() {
 
         try {
             // Make the API call to login
-            const response = await axios.post('http://localhost:5000/api/v2/user/login', { email, password });
+            const response = await axios.post('https://notifier-backend.vercel.app/api/v2/user/login', { email, password });
 
             // Display success message
             Swal.fire({
