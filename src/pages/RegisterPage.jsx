@@ -29,7 +29,7 @@ function RegisterPage() {
         // https://weatherreminderbackend.vercel.app/api/v2/user/register
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:5000/api/v2/user/register',{name,email,phone,password,location});
+            const response = await axios.post('https://notifier-backend.vercel.app/api/v2/user/register',{name,email,phone,password,location});
             console.log(response.data);
             toast.success('Account creation successful');
             console.log('Account successfully registered')
